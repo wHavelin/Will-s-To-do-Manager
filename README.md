@@ -64,16 +64,16 @@ This was designed to look good on devices of any size, be accessibility complian
 - Tasks are assumed to not need attachments or lengthy descriptions/context.
 - It's assumed that a relatively small amount of tasks will be there at any given time, such that you don't need options like searching for tasks or specific filtered views like only tasks due within the next week.
 - This was built with the idea that the number of team members will be relatively small (like less than 20).
-- It's assumed that only one user will be editing tasks at a time (we don't have conflict detection logic or auto refresh logic to automatically show a new task that someone else created while you are looking at the tasks view).
+- It's assumed that only one user will be editing tasks at a time (it doesn't have conflict detection logic or auto refresh logic to automatically show a new task that someone else created while you are looking at the tasks view).
 
 ## Scalability
 
-This app is not built to handle large amounts of data. If there are significant numbers of tasks and/or team members changes would need to be made to accommodate that. Instead of loading all of them at once we would need to load only some of them at any given time and implement something like pagination. Additionally, UX changes would be helpful to better handle large amounts of options. For example, we would want to have a search bar in the dropdown to assign a task that would let the user start typing the name of the person to assign and show options of people who match the search input. The usage of SQLite also limits it to be run on one server, to get truly large we would need to use an actual SQL database.
+This app is not built to handle large amounts of data. If there are significant numbers of tasks and/or team members changes would need to be made to accommodate that. Instead of loading all of them at once, it should load only some of them at any given time and implement something like pagination. Additionally, UX changes would be helpful to better handle large amounts of options. For example, there should be a search bar in the dropdown to assign a task that lets the user start typing the name of the person to assign and shows options of people who match the search input. The usage of SQLite also limits it to be run on one server; to scale truly large it would need to use an actual SQL database.
 
 ## Possible improvements
 
-- If this was going to be used in cases where not everyone has access to everything, we would need to have user accounts and have users log in and then only show them the tasks they have access to.
-- To handle multiple teams, we could have the option to assign tasks to teams and have views filtering by team.
+- If this was going to be used in cases where not everyone has access to everything, it would need user accounts so users can log in and only see the tasks they have access to.
+- To handle multiple teams, there could be an option to assign tasks to teams and have views filtering by team.
 - Tasks could have comments to allow people to add additional information.
-- We could have analytics views allowing user to analyze historical data of tasks.
+- It could have analytics views allowing user to analyze historical data of tasks.
 - Those analytics views could be enhanced with AI insights into the data.
