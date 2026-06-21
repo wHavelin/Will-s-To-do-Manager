@@ -1,0 +1,58 @@
+:root {
+  --text: #374151;
+  --text-muted: #4b5563;
+  --text-heading: #111827;
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --border: #e5e7eb;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+  --overdue: #b45309;
+
+  font: 16px/150% system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #d1d5db;
+    --text-muted: #9ca3af;
+    --text-heading: #f9fafb;
+    --bg: #111827;
+    --surface: #1f2937;
+    --border: #374151;
+    --accent: #818cf8;
+    --accent-hover: #a5b4fc;  /* lighter so dark text passes on button hover bg */
+    --danger: #f87171;
+    --danger-hover: #ef4444;
+    --overdue: #fbbf24;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+input {
+  font: inherit;
+}

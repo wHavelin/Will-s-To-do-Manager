@@ -1,0 +1,19 @@
+# .NET build output
+bin/
+obj/
+
+# SQLite database
+*.db
+*.db-shm
+*.db-wal
+
+# IDE
+.vscode/
+.vs/
+.idea/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
